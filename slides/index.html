@@ -49,10 +49,6 @@
             padding-left: 70px;
         }
 
-        img {
-            width: 25%;
-        }
-
         .img-centered {
             width: 80%;
             display: block;
@@ -86,6 +82,7 @@
         <li>Test Driven Development ?</li>
         <li><b><font style="color: red">Red </font><font style="color: #008000"> Green </font> Refactor</b></li>
         <li>Test = Spec</li>
+        <li>Think Given, When, Then</li>
     </ul>
 </section>
 <section id="pourquoi">
@@ -132,50 +129,64 @@
 <section id="Retro1">
     <h1>Retrospective</h1>
 </section>
+<section id="Tips2">
+    <h1>Tips</h1>
+    <ul class="steps">
+        <li>First make it work, then make it right, then make it small and fast.</li>
+        <li>Care for your code, care for your tests</li>
+        <li>refactor, extract, helpers</li>
+    </ul>
+</section>
+<section id="refactoring_tests">
+    <img src="images/SadTest.png" class="img-centered">
+</section>
+<section id="refactoring_tests2">
+    <img src="images/HappyTest.png" class="img-centered">
+</section>
 <section id="kata2">
     <h1>Kata #2: String Calculator</h1>
     <!--<ul class="items">-->
-        <!--<li>Create a simple String calculator with a method int Add(string numbers)-->
-            <!--<ul class="items">-->
-                <!--<li>The method can take 0, 1 or 2 numbers, and will return their sum (for an empty string it will return-->
-                    <!--0)-->
-                    <!--for example “” or “1” or “1,2”-->
-                <!--</li>-->
-                <!--<li>Start with the simplest test case of an empty string and move to 1 and two numbers</li>-->
-                <!--<li>Remember to solve things as simply as possible so that you force yourself to write tests you did not-->
-                    <!--think about-->
-                <!--</li>-->
-                <!--<li>Remember to refactor after each passing test</li>-->
-            <!--</ul>-->
-        <!--</li>-->
-        <!--<li>Allow the Add method to handle an unknown amount of numbers</li>-->
-        <!--<li>Allow the Add method to handle new lines between numbers (instead of commas).-->
-            <!--<ul class="items">-->
-                <!--<li>the following input is ok: “1\n2,3” (will equal 6)</li>-->
-                <!--<li>the following input is NOT ok: “1,\n” (not need to prove it - just clarifying)</li>-->
-            <!--</ul>-->
-        <!--</li>-->
-        <!--<li>Support different delimiters-->
-            <!--<ul class="items">-->
-                <!--<li>to change a delimiter, the beginning of the string will contain a separate line that looks like-->
-                    <!--this:-->
-                    <!--“//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter-->
-                    <!--is-->
-                    <!--‘;’ .-->
-                <!--</li>-->
-                <!--<li>the first line is optional. all existing scenarios should still be supported</li>-->
-            <!--</ul>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative-->
-            <!--that was passed.if there are multiple negatives, show all of them in the exception message.-->
-        <!--</li>-->
-        <!--<li>Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2</li>-->
-        <!--<li>Delimiters can be of any length with the following format: “//[delimiter]\n” for example:-->
-            <!--“//[***]\n1***2***3” should return 6</li>-->
-        <!--<li>Allow multiple delimiters like this: “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return-->
-            <!--6.</li>-->
-        <!--<li>make sure you can also handle multiple delimiters with length longer than one char</li>-->
+    <!--<li>Create a simple String calculator with a method int Add(string numbers)-->
+    <!--<ul class="items">-->
+    <!--<li>The method can take 0, 1 or 2 numbers, and will return their sum (for an empty string it will return-->
+    <!--0)-->
+    <!--for example “” or “1” or “1,2”-->
+    <!--</li>-->
+    <!--<li>Start with the simplest test case of an empty string and move to 1 and two numbers</li>-->
+    <!--<li>Remember to solve things as simply as possible so that you force yourself to write tests you did not-->
+    <!--think about-->
+    <!--</li>-->
+    <!--<li>Remember to refactor after each passing test</li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>Allow the Add method to handle an unknown amount of numbers</li>-->
+    <!--<li>Allow the Add method to handle new lines between numbers (instead of commas).-->
+    <!--<ul class="items">-->
+    <!--<li>the following input is ok: “1\n2,3” (will equal 6)</li>-->
+    <!--<li>the following input is NOT ok: “1,\n” (not need to prove it - just clarifying)</li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>Support different delimiters-->
+    <!--<ul class="items">-->
+    <!--<li>to change a delimiter, the beginning of the string will contain a separate line that looks like-->
+    <!--this:-->
+    <!--“//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter-->
+    <!--is-->
+    <!--‘;’ .-->
+    <!--</li>-->
+    <!--<li>the first line is optional. all existing scenarios should still be supported</li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative-->
+    <!--that was passed.if there are multiple negatives, show all of them in the exception message.-->
+    <!--</li>-->
+    <!--<li>Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2</li>-->
+    <!--<li>Delimiters can be of any length with the following format: “//[delimiter]\n” for example:-->
+    <!--“//[***]\n1***2***3” should return 6</li>-->
+    <!--<li>Allow multiple delimiters like this: “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return-->
+    <!--6.</li>-->
+    <!--<li>make sure you can also handle multiple delimiters with length longer than one char</li>-->
     <!--</ul>-->
 </section>
 <section id="retroExo">
