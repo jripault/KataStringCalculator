@@ -93,7 +93,7 @@ public class FizzBuzzTest {
         String result = fizzBuzz.write(15);
 
         // Then
-        assertThat(result).isEqualTo("Fizz Buzz");
+        assertThat(result).isEqualTo("FizzBuzz");
     }
 
 
@@ -108,6 +108,6 @@ public class FizzBuzzTest {
         }
 
         // Then
-        assertThat(results).containsExactly("1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,Fizz,14,Fizz Buzz,16,17,Fizz,19,Buzz,Fizz,22,Fizz,Fizz,Buzz,26,Fizz,28,29,Fizz Buzz,Fizz,Fizz,Fizz,Fizz,Fizz Buzz,Fizz".split(","));
+        assertThat(results).containsExactly("1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,Fizz,14,FizzBuzz,16,17,Fizz,19,Buzz,Fizz,22,Fizz,Fizz,Buzz,26,Fizz,28,29,FizzBuzz,Fizz,Fizz,Fizz,Fizz,FizzBuzz,Fizz".split(","));
     }
 }

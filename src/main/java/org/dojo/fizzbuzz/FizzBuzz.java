@@ -14,7 +14,7 @@ public class FizzBuzz {
             number += "Fizz";
         }
         if(i % 5 == 0 || i.toString().contains("5")) {
-            number += " Buzz";
+            number += "Buzz";
         }
 
         if("".equals(number)){
