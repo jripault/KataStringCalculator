@@ -1,210 +1,268 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ruban</title>
+    <title>Coding Dojo : FizzBuzz & StringCalculator</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="components/normalize-css/normalize.css"/>
     <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="components/highlightjs/styles/tomorrow.css"/>
     <link rel="stylesheet" href="css/ruban.min.css"/>
     <link rel="stylesheet" href="css/ruban-print.min.css" media="print"/>
-
-    <style>
-        section {
-            border-left: 1em solid #434343;
-            border-right: 1em solid #434343;
-        }
-
-        .pagination {
-            right: 2.6em;
-        }
-
-        pre code {
-            background-color: inherit;
-        }
-
-        pre .xml .javascript {
-            opacity: 1;
-        }
-
-        ul .items {
-            list-style: circle;
-        }
-
-        li {
-            padding-left: 1em;
-            font-size: 30px;
-            padding-bottom: 10px;
-        }
-
-        a {
-            text-decoration: underline;
-        }
-
-        .strike {
-            text-decoration: line-through;
-            padding-left: 70px;
-        }
-
-        .subSection {
-            padding-left: 70px;
-        }
-
-        .img-centered {
-            width: 80%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/custom.css"/>
 </head>
 
 <body>
-<section id="ruban">
-    <h1>Coding dojo #3</h1>
+<section id="coding-dojo" class="coding-dojo title">
+    <h1><img class="img-centered" src="images/codingDojo.png"></h1>
 </section>
-<section id="intro">
+
+<section id="intro" class="coding-dojo">
     <h1>Coding Dojo ?</h1>
     <ul class="steps">
         <li>C'est quoi ?</li>
+        <!-- Dojo : lieu d'apprentissage des arts martiaux - Kata : forme d'entrainement, répétition d'un exercice -->
         <li class="subSection">Lieu d'apprentissage</li>
         <li>Pour quoi faire ?</li>
+        <!-- l'objectif premier est d'apprendre et non pas de terminer l'excercice -->
+        <li class="strike">Terminer l'exercice</li>
         <li class="strike">Compétition</li>
-        <li class="subSection">S'améliorer en dev</li>
+        <li class="subSection">S'améliorer en développement</li>
+        <li class="subSection"><strong>APPRENDRE !</strong></li>
         <li>Terrain d'entrainement</li>
+        <!-- Safe (no prod), error is ok, favoriser l'échange -->
         <li class="strike">Pression</li>
         <li class="subSection">Error is ok</li>
     </ul>
 </section>
-<section id="sujet">
-    <h1>Sujet</h1>
+<section id="sujet" class="coding-dojo">
+    <h1>Sujet : TDD</h1>
     <ul class="steps">
-        <li>Test Driven Development ?</li>
+        <li><strong>T</strong>est <strong>D</strong>riven <strong>D</strong>evelopment ?</li>
         <li><img class="img-centered" src="images/redGreenRefactor.png"/></li>
-        <li>Test = Spec</li>
         <li>Think Given, When, Then</li>
     </ul>
 </section>
-<section id="pourquoi">
+<section id="why" class="coding-dojo">
+    <h1>Pourquoi ?</h1>
+    <ul class="steps">
+        <li>Les tests c'est pour ceux qui ne savent pas coder</li>
+        <li><img class="img-centered" src="images/testing.gif"></li>
+    </ul>
+</section>
+<section id="why2" class="coding-dojo">
     <h1>Pourquoi ?</h1>
     <ul class="steps">
         <li>Ready for change, non reg</li>
-        <li>Test = documentation</li>
+        <li>Test <strong>=</strong> Spec</li>
+        <li>Test <strong>=</strong> Documentation</li>
         <li>Start with the goal in mind</li>
         <li>Short Feedback loop</li>
-        <li>Not just tests: the design</li>
+        <li>Not just tests: <strong>the design</strong></li>
     </ul>
 </section>
-<section id="table-of-contents2">
-    <h1>Planning</h1>
+<section id="planning" class="coding-dojo">
+    <h1>Planning du dojo <i class="fa fa-clock-o"></i></h1>
     <ul>
         <li>Kata #1 Randori (20 min.) - Sujet : FizzBuzz</li>
         <li>Rétro. (5 min.)</li>
         <li>Kata #2 Pair prog. (20 min.) - Sujet : String Calculator</li>
         <li>Rétro. (5 min.)</li>
-        <li>Kata #2 Pair prog. (2) (20 min.)</li>
+        <li>Kata #2 Pair prog. (2) (25 min.)</li>
         <li>Rétro. & Conclusion (15 min.)</li>
     </ul>
 </section>
-<section id="rules">
-    <h1>Kata #1: FizzBuzz</h1>
-    <ul class="steps">
-        <li>Pour un nombre saisi :</li>
-        <li>S'il est multiple de 3 : écrire Fizz</li>
-        <li>S'il est multiple de 5 : écrire Buzz</li>
-        <li>Sinon écrire le nombre</li>
-        <li>...</li>
-        <li>Mais de nouveaux besoins apparaissent :</li>
-        <li>Si le nombre est multiple de 3 ou contient 3 : écrire Fizz</li>
-        <li>Si le nombre est multiple de 5 ou contient 5 : écrire Buzz</li>
+<section id="installation" class="coding-dojo">
+    <h1><i class="fa fa-download"></i> Installation</h1>
+    <ul>
+        <li>Environnement : Eclipse ou pour changer <a href="https://www.jetbrains.com/idea/">IntelliJ</a></li>
+        <li><a href="https://github.com/jripault/KataStringCalculator">Le Code</a></li>
+        <li>Pour les tests :
+            <ul>
+                <li><a href="http://junit.org/">Junit</a></li>
+                <li>
+                    <a href="http://joel-costigliola.github.io/assertj/">AssertJ</a> (librairie d'assertions, fork de
+                    FestAssert)
+                </li>
+                <li><a href="http://www.eclemma.org/">Eclemma</a> (plugin couverture de code sous Eclipse)</li>
+                <li>
+                    <a href="http://infinitest.github.io/">InfiniTest</a> (plugin IntelliJ/Eclipse pour lancer les tests
+                    unitaires automatiquement à chaque changement)
+                </li>
+                <li>
+                    <a href="http://moreunit.sourceforge.net/">MoreUnit</a> (plugin IntelliJ/Eclipse pour améliorer
+                    l'intégration de ses tests unitaires dans l'IDE)
+                </li>
+            </ul>
+        </li>
     </ul>
 </section>
-<section id="table-of-contents">
+
+<section id="kata" class="kata title">
+    <h1 style="text-align: center;">Kata !!!</h1>
+    <ul class="steps">
+        <li>
+            <blockquote>Whatever luck I had, I made. I was never a natural athlete, but I paid my dues in sweat and
+                concentration and took the time necessary to learn Karate and become World Champion.
+            </blockquote>
+        </li>
+        <li>
+            <small>Chuck Norris (American martial artist and actor. Also, the only man who has counted to infinity.
+                <strong>Twice.</strong>)
+            </small>
+        </li>
+    </ul>
+</section>
+<section id="kata1-rules" class="kata">
+    <h1>Kata #1: FizzBuzz</h1>
+    <ul class="steps">
+        <li>1 méthode : <code>int write(Integer i)</code></li>
+        <li>
+            Pour un nombre saisi :
+            <ul class="items">
+                <li>s'il est <strong>multiple de 3</strong> : écrire <strong>Fizz</strong></li>
+                <li>s'il est <strong>multiple de 5</strong> : écrire <strong>Buzz</strong></li>
+                <li>sinon écrire le nombre</li>
+            </ul>
+        </li>
+        <li>
+            Mais de nouveaux besoins apparaissent :
+            <ul class="items">
+                <li>
+                    si le nombre est <strong>multiple de 3</strong> ou <strong>contient 3</strong> : écrire
+                    <strong>Fizz</strong>
+                </li>
+                <li>
+                    si le nombre est <strong>multiple de 5</strong> ou <strong>contient 5</strong> : écrire
+                    <strong>Buzz</strong>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section id="tips" class="kata">
     <h1>Tips</h1>
     <ul class="steps">
         <li>Tell a (simple) story</li>
         <li>A test must specify only one thing</li>
-        <li>Slow down, <strong>Baby Steps</strong></li>
+        <li>Slow down, <strong>Baby steps</strong></li>
     </ul>
 </section>
+
+<section id="iteration1" class="iteration title">
+    <h1>A vos marques, prêts ? TDD ! (20 min)</h1>
 </section>
-<section id="iteration1">
-    <h1>A vos marques, Prêts ? TDD !</h1>
-</section>
-<section id="Retro1">
-    <h1>Retrospective</h1>
-</section>
-<section id="Tips2">
-    <h1>Tips</h1>
+<section id="retro1" class="iteration">
+    <h1>Rétro (5 min)</h1>
     <ul class="steps">
-        <li>First make it work, then make it right, then make it small and fast.</li>
-        <li>Care for your code, care for your tests</li>
-        <li>refactor, extract, helpers</li>
+        <li>Difficultés rencontrées</li>
+        <li>Couverture de tests</li>
+        <li>Tester != coder</li>
     </ul>
 </section>
-<section id="refactoring_tests">
-    <img src="images/sadTest.png" class="img-centered">
+<section id="tips2" class="iteration">
+    <h1>Tips #2</h1>
+    <ul class="steps">
+        <li>First make it work, then make it right, then make it small and fast</li>
+        <li>Care for your code, <strong>care for your tests</strong></li>
+        <li>Refactor, extract, helpers</li>
+    </ul>
 </section>
-<section id="refactoring_tests2">
-    <img src="images/happyTest.png" class="img-centered">
+<section id="refactoring-tests" class="iteration">
+    <ul class="steps">
+        <li><img src="images/sadTest.png" class="img-centered"></li>
+        <li><strong>VS</strong></li>
+        <li><img src="images/happyTest.png" class="img-centered"></li>
+    </ul>
 </section>
-<section id="kata2">
+
+<section id="kata2-rules" class="kata">
     <h1>Kata #2: String Calculator</h1>
-    <ul class="items">
-        <li>Create a simple String calculator with a method int Add(string numbers)
+    <ul class="steps">
+        <li>1 method: <code>int add(String numbers)</code>
+        <li>
+            The method can take 0, 1 or 2 numbers, and will return their sum for example "" or "1" or "1,2" (for an
+            empty string it will return 0)
+        </li>
+    </ul>
+</section>
+<section id="tips3" class="kata">
+    <h1>Tips #3</h1>
+    <ul class="steps">
+        <li>Start with the simplest test case of an empty string and move to 1 and two numbers</li>
+        <li>
+            Remember to solve things as simply as possible so that you force yourself to write tests you did not think
+            about
+        </li>
+        <li>Remember to refactor after each passing test</li>
+    </ul>
+</section>
+<section id="kata2-more-rules" class="kata">
+    <h1>More rules...</h1>
+    <ul>
+        <li>Allow the <strong>add</strong> method to handle an unknown amount of numbers</li>
+        <li>Allow the <strong>add</strong> method to handle new lines between numbers (instead of commas):
             <ul class="items">
-                <li>The method can take 0, 1 or 2 numbers, and will return their sum (for an empty string it will return 0)
-                    for example “” or “1” or “1,2”
-                </li>
-                <li>Start with the simplest test case of an empty string and move to 1 and two numbers</li>
-                <li>Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
-                </li>
-                <li>Remember to refactor after each passing test</li>
+                <li>the following input is ok: "1\n2,3" (will equal 6)</li>
+                <li>the following input is NOT ok: "1,\n" (not need to prove it - just clarifying)</li>
             </ul>
         </li>
-        <li>Allow the Add method to handle an unknown amount of numbers</li>
-        <li>Allow the Add method to handle new lines between numbers (instead of commas).
-            <ul class="items">
-                <li>the following input is ok: “1\n2,3” (will equal 6)</li>
-                <li>the following input is NOT ok: “1,\n” (not need to prove it - just clarifying)</li>
-            </ul>
-        </li>
-        <li>Support different delimiters
+    </ul>
+</section>
+<section id="kata2-more-rules2" class="kata">
+    <h1>More rules...</h1>
+    <ul>
+        <li>Support different delimiters:
             <ul class="items">
                 <li>to change a delimiter, the beginning of the string will contain a separate line that looks like
-                    this:
-                    “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter
-                    is
-                    ‘;’ .
+                    this: "//[delimiter]\n[numbers…]" for example "//;\n1;2" should return three where the default
+                    delimiter is ';'
                 </li>
-                <li>the first line is optional. all existing scenarios should still be supported</li>
+                <li>the first line is optional. All existing scenarios should still be supported</li>
             </ul>
         </li>
         <li>
-            Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative
-            that was passed.if there are multiple negatives, show all of them in the exception message.
+            Calling <strong>add</strong> method with a negative number will throw an exception "negatives not allowed" -
+            and the negative that was passed. If there are multiple negatives, show all of them in the exception
+            message
         </li>
+    </ul>
+</section>
+<section id="kata2-more-rules3" class="kata">
+    <h1>More rules...</h1>
+    <ul class="items">
         <li>Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2</li>
-        <li>Delimiters can be of any length with the following format: “//[delimiter]\n” for example:
-            “//[***]\n1***2***3” should return 6
+        <li>Delimiters can be of any length with the following format: "//[delimiter]\n" for example:
+            "//[***]\n1***2***3" should return 6
         </li>
-        <li>Allow multiple delimiters like this: “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return
-            6.
+        <li>Allow multiple delimiters like this: "//[delim1][delim2]\n" for example "//[*][%]\n1*2%3" should return 6
+            (make sure you can also handle multiple delimiters with length longer than one char)
         </li>
-        <li>make sure you can also handle multiple delimiters with length longer than one char</li>
     </ul>
 </section>
-<section id="retroExo">
-    <h1>Retro de l'exercice</h1>
+<section id="iteration2" class="iteration title">
+    <h1>A vos marques, prêts ? TDD ! (20 min)</h1>
+</section>
+<section id="retro2" class="iteration">
+    <h1>Rétro (5 min)</h1>
     <ul class="steps">
-        <li>Tour de table: avancement, solutions, difficultés, ressenti</li>
-        <li>Pair programming ?</li>
-        <li>Sur votre projet ?</li>
+        <li>Tour de table : avancement, solutions, difficultés, ressenti</li>
+        <li>En faire moins ? Pas forcément si simple !</li>
+        <li>La maintenance des tests</li>
     </ul>
 </section>
-<section id="retroDojo">
-    <h1>Retro du dojo</h1>
+<section id="iteration3" class="iteration title">
+    <h1>On continue ! (25 min)</h1>
+</section>
+<section id="retro3" class="iteration">
+    <h1>Rétro du Kata (10 min)</h1>
+    <ul class="steps">
+        <li>Tour de table : avancement, solutions, difficultés, ressenti</li>
+        <li>Pair programming ?</li>
+        <li>Toujours peur du TDD ?</li>
+    </ul>
+</section>
+<section id="retro4" class="iteration">
+    <h1>Rétro du Dojo (5 min)</h1>
     <ul class="steps">
         <li>What went well ?</li>
         <li>What could be improved ?</li>
@@ -212,16 +270,17 @@
         <li>ROTI</li>
     </ul>
 </section>
-<section id="references">
-    <h1>Références</h1>
-    <a href="http://www.amazon.fr/Test-Driven-Development-By-Example/dp/0321146530"><img width="20%"
-                                                                                         src="http://ecx.images-amazon.com/images/I/51K3KXOKrJL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_SX385_SY500_CR,0,0,385,500_SH20_OU08_.jpg"/></a>
-    <a href="http://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"><img width="20%"
-                                                                                                 src="http://ecx.images-amazon.com/images/I/41znMZniZ1L._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_SX385_SY500_CR,0,0,385,500_SH20_OU08_.jpg"/></a>
-    <a href="http://www.amazon.fr/Effective-Java-Joshua-Bloch/dp/0321356683"><img width="20%"
-                                                                                  src="http://ecx.images-amazon.com/images/I/51EHjWvpClL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_SX385_SY500_CR,0,0,385,500_SH20_OU08_.jpg"/></a>
-    <a href="http://www.amazon.fr/Refactoring-Improving-Design-Existing-Code/dp/0201485672"><img width="20%"
-                                                                                                 src="http://ecx.images-amazon.com/images/I/41gNhHqNwGL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_SX385_SY500_CR,0,0,385,500_SH20_OU08_.jpg"/></a>
+
+<section id="references" class="coding-dojo">
+    <h1><i class="fa fa-book"></i> Références</h1>
+    <a href="http://www.amazon.fr/Test-Driven-Development-By-Example/dp/0321146530"><img
+            src="images/testDrivenDevelopmentByExample.jpg"/></a>
+    <a href="http://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"><img
+            src="images/cleanCode.jpg"/></a>
+    <a href="http://www.amazon.fr/Effective-Java-Joshua-Bloch/dp/0321356683"><img
+            src="images/refactoringImprovingDesignExistingCode.jpg"/></a>
+    <a href="http://www.amazon.fr/Refactoring-Improving-Design-Existing-Code/dp/0201485672"><img
+            src="images/effectiveJava.jpeg"/></a>
 </section>
 
 <script src="components/jquery/jquery.min.js"></script>
