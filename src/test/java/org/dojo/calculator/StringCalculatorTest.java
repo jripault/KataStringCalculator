@@ -2,7 +2,7 @@ package org.dojo.calculator;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class StringCalculatorTest {
 
@@ -15,6 +15,7 @@ public class StringCalculatorTest {
         i++;
 
         //Then
-        assertTrue(i == 1);
+        //Then
+        assertThat(i).isEqualTo(1);
     }
 }

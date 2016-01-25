@@ -2,7 +2,7 @@ package org.dojo.fizzbuzz;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class FizzBuzzTest {
 
@@ -15,6 +15,6 @@ public class FizzBuzzTest {
         i++;
 
         //Then
-        assertTrue(i == 1);
+        assertThat(i).isEqualTo(1);
     }
 }
