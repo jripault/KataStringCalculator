@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 public class StringCalculatorTest {
 
     @Test
-    public void should_do_something(){
+    public void should_do_something() {
         //Given
         int i = 0;
 
@@ -17,5 +17,4 @@ public class StringCalculatorTest {
         //Then
         assertTrue(i == 1);
     }
-
 }
