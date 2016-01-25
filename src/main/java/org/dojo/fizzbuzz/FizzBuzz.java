@@ -3,6 +3,7 @@ package org.dojo.fizzbuzz;
 public class FizzBuzz {
     public String write(Integer i) {
         String number = "";
+
         if (i == 0) {
             return "0";
         }
