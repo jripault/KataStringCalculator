@@ -86,7 +86,7 @@ public class StringCalculatorTest {
 
         // When
         try {
-            int result = calculator.add("-1,2,-3");
+            calculator.add("-1,2,-3");
             fail("Exception expected ");
         } catch (Exception e) {
             // Then
