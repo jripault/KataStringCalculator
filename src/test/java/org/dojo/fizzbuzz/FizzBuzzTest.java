@@ -2,24 +2,18 @@ package org.dojo.fizzbuzz;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-
-/**
- * User: Samil
- * Date: 04/01/2016
- */
 public class FizzBuzzTest {
+
     @Test
     public void shouldReturnFizz() throws Exception {
-
         // Given
         FizzBuzz fizzBuzz = new FizzBuzz();
+
         // When
         String result = fizzBuzz.write(3);
 
@@ -29,9 +23,9 @@ public class FizzBuzzTest {
 
     @Test
     public void shouldNotReturnFizz() throws Exception {
-
         // Given
         FizzBuzz fizzBuzz = new FizzBuzz();
+
         // When
         String result = fizzBuzz.write(1);
 
@@ -41,9 +35,9 @@ public class FizzBuzzTest {
 
     @Test
     public void shouldReturnZero() throws Exception {
-
         // Given
         FizzBuzz fizzBuzz = new FizzBuzz();
+
         // When
         String result = fizzBuzz.write(0);
 
@@ -53,42 +47,45 @@ public class FizzBuzzTest {
 
     @Test
     public void shouldReturnBuzz() throws Exception {
-
         // Given
         FizzBuzz fizzBuzz = new FizzBuzz();
+
         // When
         String result = fizzBuzz.write(5);
 
         // Then
         assertThat(result).isEqualTo("Buzz");
     }
+
     @Test
     public void shouldReturnFizzBecauseThreeInIt() throws Exception {
-
         // Given
         FizzBuzz fizzBuzz = new FizzBuzz();
+
         // When
         String result = fizzBuzz.write(32);
 
         // Then
         assertThat(result).isEqualTo("Fizz");
     }
+
     @Test
     public void shouldReturnFizzBecauseFiveInIt() throws Exception {
-
         // Given
         FizzBuzz fizzBuzz = new FizzBuzz();
+
         // When
         String result = fizzBuzz.write(52);
 
         // Then
         assertThat(result).isEqualTo("Buzz");
     }
+
     @Test
     public void shouldReturnFizzBuzz() throws Exception {
-
         // Given
         FizzBuzz fizzBuzz = new FizzBuzz();
+
         // When
         String result = fizzBuzz.write(15);
 
@@ -96,15 +93,15 @@ public class FizzBuzzTest {
         assertThat(result).isEqualTo("FizzBuzz");
     }
 
-
     @Test
     public void shouldWorkFor36FirstNumbers() throws Exception {
         // Given
         List<String> results = new LinkedList<String>();
         FizzBuzz fizzBuzz = new FizzBuzz();
+
         // When
         for (int i = 1; i < 37; i++) {
-             results.add(fizzBuzz.write(i));
+            results.add(fizzBuzz.write(i));
         }
 
         // Then
